@@ -9,7 +9,7 @@ Run MiniMax H3 on a Google Colab A100 runtime.
 ## Setup
 
 1. **Strongly recommended:** Select the **A100 high-RAM** runtime variant in Colab. The notebook has very high memory requirements; an A100 with 80 GB VRAM and at least 60 GB of system RAM provides the most reliable experience.
-2. Add a Hugging Face secret named `HF_TOKEN` in Colab's **Secrets** tab and enable **Notebook access**.
+2. Create a Hugging Face access token at [Hugging Face Settings > Access Tokens](https://huggingface.co/settings/tokens). Sign in, select **Create new token**, choose the **Read** permission, and copy the token. In Colab, open the **Secrets** tab, add a secret named `HF_TOKEN`, paste the token as its value, and enable **Notebook access**. Never commit or share the token.
 3. Run the code cells in order:
 	- The first cell mounts Google Drive and caches the SageAttention wheel at `/content/drive/MyDrive/wheels/sageattention`.
 	- In the next cell, set `USE_DRIVE = True` if model files should persist in `DRIVE_CACHE`.
